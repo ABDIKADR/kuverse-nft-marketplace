@@ -1,0 +1,29 @@
++---------------------+      +------------------------+      +-------------------+
+|                     |      |                        |      |                   |
+|  Web Browser        |      |  Ethereum Blockchain   |      |  IPFS / Arweave   |
+|  +--------------+   |      |  +----------------+    |      |  +--------------+ |
+|  | React UI     |<--|----->|  | KuverseNFT     |<---|----->|  | NFT Metadata | |
+|  | Components   |   |      |  | Contract       |    |      |  | & Images     | |
+|  +--------------+   |      |  +----------------+    |      |  +--------------+ |
+|         ^           |      |         ^              |      |                   |
+|         |           |      |         |              |      +-------------------+
+|         v           |      |         v              |
+|  +--------------+   |      |  +----------------+    |
+|  | Web3/Ethers  |<--|----->|  | Marketplace    |    |
+|  | Provider     |   |      |  | Contract       |    |
+|  +--------------+   |      |  +----------------+    |
+|                     |      |                        |
++---------------------+      +------------------------+
+
+Architecture Overview:
+- User interacts with the React-based UI in their web browser
+- The UI uses ethers.js to connect to the Ethereum blockchain
+- Smart contracts handle the NFT and marketplace functionality
+- Metadata and images are stored on IPFS/Arweave for decentralization
+
+Data Flow:
+1. User connects wallet to the UI
+2. UI initializes contract instances and loads data 
+3. User actions (mint, list, buy) trigger contract calls
+4. Contracts emit events that the UI listens for
+5. UI updates in real-time based on blockchain state 
