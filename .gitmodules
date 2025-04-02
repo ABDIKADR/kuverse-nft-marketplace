@@ -1,0 +1,6 @@
+[submodule "kuverse-foundry"]
+	path = kuverse-foundry
+	url = ./kuverse-foundry
+[submodule "kuverse-mvp"]
+	path = kuverse-mvp
+	url = ./kuverse-mvp
